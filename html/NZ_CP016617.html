@@ -9,23 +9,25 @@
     <style>
         body {
             font-family: 'Helvetica', sans-serif;
+
         }
         #my-viewer {
-            height: 800px;
-            width: 1500px;
+            height: 500px;
+            width: 500px;
+            border: 0px solid black;
         }
         .cgv-controls {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         flex-wrap: wrap;
         }
 
         .cgv-btn {
         width: 30px;
         height: 30px;
-        border: 1px solid black;
+        border: 0px solid black;
         cursor: pointer;
-        margin: 0 3px 6px 0;
+        margin: 3px 17px 6px 0;
         filter: invert(39%) sepia(11%) saturate(1202%) hue-rotate(165deg) brightness(95%) contrast(92%);
         transition: filter 0.4s;
         }
@@ -189,8 +191,8 @@
 
 
         cgv = new CGV.Viewer('#my-viewer', {
-        height: 900,
-        width: 1500,
+        height: 500,
+        width: 500,
         });
         var request = new XMLHttpRequest();
         request.open('GET', 'https://raw.githubusercontent.com/mariormestre/plsdb_defense/main/_cgview_json/NZ_CP016617.json', true);
