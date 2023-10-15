@@ -3,31 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Side by Side Iframes</title>
+    <title>Embed Intermediary Page</title>
     <style>
-        #myIframeContainer {
-            display: flex;
-            flex-wrap: nowrap;  /* Prevent wrapping */
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;  /* Hide overflow content, preventing scrollbars */
-        }
-
-        #myIframeContainer iframe {
-            border: none;
-            box-sizing: border-box; /* Ensures padding and border don't affect set width */
-            width: 50%;  /* Each iframe takes up half the space */
+        body, html {
+            margin: 0;
+            padding: 0;
             height: 100%;
-            margin: 0;  /* No margins */
-            padding: 0; /* No padding */
-            overflow: hidden;  /* Hide overflow content, preventing scrollbars */
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
 <body>
-    <div id="myIframeContainer">
-        <iframe src="https://mariormestre.github.io/plsdb_defense/sankey.html"></iframe>
-        <iframe src="https://mariormestre.github.io/plsdb_defense/sankey_host.html"></iframe>
-    </div>
+    <iframe src="https://mariormestre.github.io/plsdb_defense/sankey_side_by_side_ngt50_200.html"></iframe>
 </body>
 </html>

@@ -1,40 +1,46 @@
 <!DOCTYPE html>
-<html lang="en" style="overflow: hidden;">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Side by Side Iframes</title>
+    <title>Diagrams Side by Side</title>
     <style>
-        body, html {
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;  /* Prevents horizontal scrolling if the iframes are wider than the viewport */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center; /* Horizontally aligns the items in the center */
+            align-items: center; /* Vertically aligns the items in the center */
+            gap: 0; /* Adjust this value to set space between the diagrams if needed */
+            height: 100vh; /* Makes the container fill the entire height of the viewport */
+        }
+
+        .diagram {
+            flex: 1; /* Allows each diagram to take up equal space */
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden; /* Deactivate scroll bars for the entire page */
+            border: none; /* Removes any default border from the iframe */
         }
 
-        #myIframeContainer {
-            display: flex;
-            flex-wrap: nowrap;  /* Prevent wrapping */
+        iframe {
             width: 100%;
-            height: 100vh;
-            overflow: hidden;  /* Hide overflow content, preventing scrollbars */
-        }
-
-        #myIframeContainer iframe {
-            border: none;
-            box-sizing: border-box; /* Ensures padding and border don't affect set width */
-            width: 30%;  /* Each iframe takes up half the space */
             height: 100%;
-            margin: 0;  /* No margins */
-            padding: 0; /* No padding */
-            overflow: hidden;  /* Hide overflow content, preventing scrollbars */
+            border: none; /* Removes any default border from the iframe */
         }
     </style>
 </head>
 <body>
-    <div id="myIframeContainer">
-        <iframe src="https://mariormestre.github.io/plsdb_defense/sankey_ngt50.html"></iframe>
-        <iframe src="https://mariormestre.github.io/plsdb_defense/sankey_host_ngt500.html"></iframe>
-    </div>
+
+<div class="container">
+    <iframe class="diagram" src="https://mariormestre.github.io/plsdb_defense/sankey_ngt50.html"></iframe>
+    <iframe class="diagram" src="https://mariormestre.github.io/plsdb_defense/sankey_host_ngt500.html"></iframe>
+</div>
+
 </body>
 </html>
